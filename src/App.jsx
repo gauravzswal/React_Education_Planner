@@ -19,7 +19,9 @@ function App() {
       subject: subject,
       hour: Number(hour),
     };
-
+    
+    setSubject("");
+    setHour("");
     setData([...data, obj]);
   }
 
@@ -52,7 +54,7 @@ function App() {
           <input
             type="number"
             placeholder="Hours"
-            className="border-1 p-2 rounded-lg w-16"
+            className="border-1 p-2 rounded-lg w-20"
             value={hour}
             onChange={(e) => setHour(e.target.value)}
           />
@@ -69,7 +71,7 @@ function App() {
           data.map((obj) => {
             return (
               <div className="flex gap-2 items-center">
-                <p className=" ">
+                <p className="text-white">
                   {obj.subject} - {obj.hour} Hours
                 </p>
                 <div
